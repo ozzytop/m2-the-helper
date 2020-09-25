@@ -1,0 +1,26 @@
+<?php
+
+$helper = $this->helper('Ozzytop\TheHelper\Helper\Data');
+
+
+$pageId = $helper->getPageId();
+?>
+<h1><?= $helper->getPageIdentifier();?> </h1>
+<?= $pageId; ?>
+<?php 
+$pagesStore = $helper->getPages($pageId);
+
+
+$websites = $helper->getWebsites();
+var_dump($websites);
+$stores = $helper->getStores();
+var_dump($stores);
+
+$languages = $helper->getLanguagesStore();
+var_dump($languages);
+?> 
+
+
+
+?>
+<h2>Welcome to Mageplaza.com</h2>
